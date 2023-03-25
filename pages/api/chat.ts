@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 import { ChatGPTAPI } from 'chatgpt'
 
+console.log('process.env', process.env)
 console.log('process.env.CHAT_API_KEY',process.env.CHAT_API_KEY)
 const api = new ChatGPTAPI({
   apiKey: process.env.CHAT_API_KEY!,
