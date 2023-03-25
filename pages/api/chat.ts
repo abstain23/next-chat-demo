@@ -4,8 +4,7 @@ import { ChatGPTAPI } from 'chatgpt'
 
 console.log('process.env.CHAT_API_KEY',process.env.CHAT_API_KEY)
 const api = new ChatGPTAPI({
-  apiKey: process.env.CHAT_API_KEY!,
-  apiBaseUrl: process.env.API_BASE_URL!
+  apiKey: process.env.CHAT_API_KEY!
 })
 
 export default async function handler(
