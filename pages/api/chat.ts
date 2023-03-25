@@ -19,7 +19,13 @@ export default async function handler(
       })
       return  
     }
-    const message = await api.sendMessage("如何学习k8s?")
+    if (Array.isArray(search)) {
+      res.status(400).json({
+        msg: 'param error'
+      })
+      return 
+    }
+    const message = await api.sendMessage(search)
     return res.json(message.text)
   } catch (error) {
     console.log('error =>', error)
